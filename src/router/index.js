@@ -6,6 +6,7 @@ import Products from '../views/Products.vue'
 import Login from '../views/Login.vue'
 import Shop from '../views/Shop.vue'
 import CartPage from '../views/CartPage.vue'
+import ShopPage from '../views/ShopPage.vue'
 const routes = [
   {
     path: '/login',
@@ -41,9 +42,10 @@ const routes = [
     name: 'Cart',
     component: CartPage
   },
- 
-
-
+  {
+    path:'/shops',
+    component: ShopPage
+  },
   
   {
     path:'/blogs'

@@ -27,8 +27,8 @@
           </div>
           <nav class="humberger__menu__nav mobile-menu">
               <ul>
-                  <li class="active"><a href="./index.html">Home</a></li>
-                  <li><a href="./shop-grid.html">Shop</a></li>
+                  <li class="active"><a href="">Home</a></li>
+                  <li><a href="/shops">Shop</a></li>
                   <li><a href="#">Pages</a>
                       <ul class="header__menu__dropdown">
                           <li><a href="./shop-details.html">Shop Details</a></li>
@@ -68,7 +68,7 @@
               <div class="row">
                   <div class="col-lg-3">
                       <div class="header__logo">
-                          <a href="./index.html">
+                          <a href="">
                             
                             <img :src="getFullImageUrl('/img/logo/logow.bmp')" alt="">
                         </a>
@@ -77,8 +77,8 @@
                   <div class="col-lg-6">
                       <nav class="header__menu">
                           <ul>
-                              <li class="active"><a href="./index.html">Home</a></li>
-                              <li><a href="./shop-grid.html">Shop</a></li>
+                              <li class="active"><a href="">Home</a></li>
+                              <li><a href="/shops">Shop</a></li>
                               <li><a href="#">Pages</a>
                                   <ul class="header__menu__dropdown">
                                       <li><a href="./shop-details.html">Shop Details</a></li>
@@ -122,28 +122,29 @@
 
       <!-- Hero Section Begin -->
       <section class="hero hero-normal">
-          <div class="container">
-              <div class="row">
-                  <div class="col-lg-3">
-                      <div class="hero__categories">
-                          <div class="hero__categories__all">
-                              <i class="fa fa-bars"></i>
-                              <span>All departments</span>
-                          </div>
-                          <ul>
-                              <li v-for="category in categories">  <router-link :to="`/category/${encodeId(category.name)}`">{{category.name}}</router-link></li>
-                          </ul>
-                      </div>
-                  </div>
-                  <div class="col-lg-9">
-                    <div class="hero__search">
-                    <div class="hero__search__form">
-                        <form action="/front/search" method="get">
-
-                            <input type="text" name="query" placeholder="What do yo u need?">
-                            <button type="submit" class="site-btn">SEARCH</button>
-                        </form>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="hero__categories">
+                        <div class="hero__categories__all">
+                            <i class="fa fa-bars"></i>
+                            <span>Categories</span>
+                        </div>
+                        <ul>
+                            <li v-for="category in categories"> 
+                                <router-link :to="`/category/${encodeId(category.name)}`">{{category.name}}</router-link>
+                            </li>
+                        </ul>
                     </div>
+                </div>
+                <div class="hero__search">
+    <div class="hero__search__form">
+        <form action="/front/search" method="get">
+
+            <input type="text" name="query" placeholder="What do yo u need?">
+            <button type="submit" class="site-btn">SEARCH</button>
+        </form>
+    </div>
     <div class="hero__search__phone">
         <div class="hero__search__phone__icon">
             <a v-bind:href="'sms:' + info.phone"><i class="fa fa-phone"></i></a>
@@ -154,12 +155,11 @@
         </div>
     </div>
 </div>
+            </div>
+        </div>
+    </section>
 
-                      
-                  </div>
-              </div>
-          </div>
-      </section>
+    
     </template>
 
 <script>
