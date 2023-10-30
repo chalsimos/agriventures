@@ -16,16 +16,18 @@
         </div>
     </section>
     <Shops />
+    <Footer />
 </template>
 
 <script>
 import Header from '@/components/Header.vue'
 import Categories from '@/components/Categories.vue'
 import Shops from '@/components/Shops.vue'
+import Footer from '@/components/Footer.vue'
 export default{
     name: 'ShopPage',
     components:{
-        Header,Categories, Shops
+        Header,Categories, Shops, Footer
     },
     data(){
         return{

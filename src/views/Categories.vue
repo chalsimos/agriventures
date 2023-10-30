@@ -18,11 +18,13 @@
     </section>
         <Prods />
     </div>
+    <Footer />
 </template>
 <script>
 
 import Header from '@/components/Header.vue'
 import Prods from '@/components/Prods.vue'
+import Footer from '@/components/Footer.vue'
 import axios from 'axios';
 
 export default{
@@ -73,7 +75,8 @@ export default{
     name:'Categories',
     components:{
         Header,
-        Prods
+        Prods,
+        Footer
     }
 }
 </script>

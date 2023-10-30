@@ -7,6 +7,8 @@ import Login from '../views/Login.vue'
 import Shop from '../views/Shop.vue'
 import CartPage from '../views/CartPage.vue'
 import ShopPage from '../views/ShopPage.vue'
+import RegionPage from '../views/RegionPage.vue'
+import ProvincePage from '../views/ProvincePage.vue'
 const routes = [
   {
     path: '/login',
@@ -28,7 +30,7 @@ const routes = [
     component: Categories
   },
   {
-    path: '/product/:id',
+    path: '/product/:id/:id',
     name: 'Product',
     component: Products
   },
@@ -46,7 +48,15 @@ const routes = [
     path:'/shops',
     component: ShopPage
   },
-  
+  {
+    path: '/region/:id',
+    component: RegionPage
+  },
+{
+  path:'/province/:id',
+  component: ProvincePage
+},
+
   {
     path:'/blogs'
   },
